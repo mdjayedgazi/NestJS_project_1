@@ -197,6 +197,7 @@ export class TicketsService {
     return ticket
   }
 
+  // Use this line in tsconfig.json file. for not set Null for field not update (( "useDefineForClassFields": false, ))
   update(id: number, updateTicketDto: UpdateTicketDto) {
     const ticket = this.findOne(id)
     if (ticket.status === 'closed') {
